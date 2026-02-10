@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+.question-block {
+    margin-bottom: 25px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.question-block:last-child {
+    border-bottom: none;
+}
+
+.question-block p {
+    font-size: 1.15em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.options-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.options-list li {
+    margin-bottom: 10px;
+}
+
+.options-list label {
+    display: block;
+    padding: 12px 15px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 1em;
+    text-align: left;
+}
+
+.options-list label:hover {
+    background-color: #cfe2ff;
+}
+
+.options-list input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.1);
+}
+
+.submit-button, #restart-button, #submit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.2s ease;
+}
+
+.submit-button:hover, #restart-button:hover, #submit-button:hover {
+    background-color: #0056b3;
+}
+
+#results-container {
+    margin-top: 40px;
+    text-align: left;
+}
+
+#results-container h2 {
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+#score-display {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.result-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item p {
+    margin: 5px 0;
+}
+
+.result-item .question {
+    font-weight: bold;
+    color: #444;
+}
+
+.result-item .user-answer.correct {
+    color: #28a745; /* Зеленый для правильного ответа */
+}
+
+.result-item .user-answer.incorrect {
+    color: #dc3545; /* Красный для неправильного ответа */
+}
+
+.result-item .correct-answer-text {
+    font-style: italic;
+    color: #007bff;
+}

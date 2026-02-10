@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Викторина Frontend/Backend</h1>
+        <div id="quiz-container">
+            <!-- Вопросы будут загружены сюда JavaScript'ом -->
+            <p>Загрузка вопросов...</p>
+        </div>
+        <button id="submit-button" style="display: none;">Завершить викторину</button>
+        <div id="results-container" style="display: none;">
+            <h2>Ваши результаты:</h2>
+            <p id="score-display"></p>
+            <div id="detailed-results">
+                <!-- Подробные результаты будут здесь -->
+            </div>
+            <button id="restart-button">Начать заново</button>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
