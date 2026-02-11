@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
             displayQuestions();
             submitButton.style.display = 'block';
         } catch (error) {
-            quizContainer.innerHTML = `<p style="color: red;">Ошибка при загрузке вопросов: ${error.message}</p>`;
+            quizContainer.innerHTML = `<p style="color: red;">Ошибка при загрузке вопросов: ${error.message}</p>
+                                       <p style="color: red;">Возможно, проблема с Unsplash API ключом или лимитами запросов.</p>`;
             console.error('Ошибка при загрузке вопросов:', error);
         }
     }
@@ -34,7 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
         questionsData.forEach((q, index) => {
             const questionBlock = document.createElement('div');
             questionBlock.classList.add('question-block');
+
+            let imageHtml = '';
+            if (q.image_url) {
+                // Добавляем изображение к вопросу
+                imageHtml = `<div class="question-image-container">
+                                <img src="${q.image_url}" alt="Изображение по теме вопроса" class="question-image">
+                            </div>`;
+            }
+
             questionBlock.innerHTML = `
+                ${imageHtml}
                 <p>Вопрос ${index + 1}: ${q.question}</p>
                 <ul class="options-list">
                     ${q.options.map(option => `
